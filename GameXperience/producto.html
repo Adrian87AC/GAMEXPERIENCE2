@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GameXperience</title>
+
+  <!-- Tipografías: Orbitron (titulares) + Inter (cuerpo) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/producto.css">
+</head>
+<body>
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Header de Pago</title>
+    <style>
+        /* --- Estilos Generales --- */
+        .instant-gaming-header {
+            background-color: #1a1a1a; /* Fondo oscuro del header */
+            color: #fff;
+            display: flex;
+            justify-content: space-between; /* Distribuye espacio entre logo, pasos y seguridad */
+            align-items: center;
+            padding: 15px 5%; /* Padding vertical y horizontal */
+            min-height: 80px;
+            font-family: Arial, sans-serif;
+            border-bottom: 2px solid #000; /* Separación visual inferior */
+        }
+
+        /* --- Logo --- */
+        .header-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-text {
+            /* Fuente y color del logo (simulación) */
+            font-size: 1.6em;
+            font-weight: 900;
+            color: #ff5500;
+            line-height: 1;
+            /* Se necesitaría un icono/fuente personalizada para el logo exacto */
+        }
+
+        /* --- Pasos del Proceso (Nav) --- */
+        .header-steps {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .steps-list {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            font-size: 0.9em;
+            color: #666; /* Color de texto inactivo */
+            position: relative;
+        }
+
+        /* Separador entre pasos (la línea horizontal) */
+        .step-separator {
+            width: 30px;
+            height: 1px;
+            margin: 0 10px;
+            background-color: #666; /* Color de línea inactiva */
+        }
+        
+        /* Línea blanca para pasos completados/actuales */
+        .step.completed + .step-separator,
+        .step.current + .step-separator {
+            background-color: #fff;
+        }
+
+        /* Círculo del número */
+        .step-circle {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid #666; /* Borde de paso inactivo */
+            margin-right: 5px;
+        }
+
+        /* Estilos para el paso completado o actual */
+        .step.completed, .step.current {
+            color: #fff; /* Texto activo en blanco */
+        }
+
+        .step.completed .step-circle, .step.current .step-circle {
+            border-color: #fff; /* Borde activo en blanco */
+            color: #fff;
+        }
+
+
+        /* --- Pago Seguro --- */
+        .header-security {
+            display: flex;
+            align-items: center;
+            color: #00cc00; /* Verde brillante para el pago seguro */
+            font-size: 0.8em;
+            text-align: right;
+            margin-left: 20px; /* Espacio con los pasos */
+        }
+
+        /* Icono de seguridad (simulado con SVG simple) */
+        .security-icon {
+            width: 24px;
+            height: 24px;
+            stroke: #00cc00;
+            border: 1px solid #00cc00;
+            border-radius: 50%;
+            padding: 2px;
+            margin-right: 8px;
+            flex-shrink: 0; /* Evita que el icono se encoja */
+        }
+
+        .security-text .safe-pay {
+            font-weight: bold;
+            margin: 0;
+            color: #00cc00; /* Texto principal en verde */
+        }
+
+        .security-text .encryption-info {
+            font-size: 0.8em;
+            color: #888; /* Texto de encriptación más tenue */
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header class="instant-gaming-header">
+    <div class="header-logo">
+        <img src ="img/logo.jpg" alt="Logo GameXperience" style="height:40px; margin-right:10px;">
+        <span class="logo-text">GameXperience</span>
+    </div>
+
+    <nav class="header-steps">
+        <ul class="steps-list">
+            <li class="step completed">
+                <span class="step-circle">1</span>
+                <span class="step-name">Cesta</span>
+            </li>
+            <div class="step-separator"></div>
+
+            <li class="step current">
+                <span class="step-circle">2</span>
+                <span class="step-name">Pago</span>
+            </li>
+            <div class="step-separator"></div>
+
+            <li class="step">
+                <span class="step-circle">3</span>
+                <span class="step-name">Activación del juego</span>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section class = "producto">
+  <h2 class = "battlefield">Battlefield</h2>
+  <img class = "imagen-battlefield" src ="img/battlefield.jpg" alt ="battlefield">
+</section>
+</body>
+
+  <main>
+    <!-- Hero adaptado al formato de la imagen "Captura" (usa img/Captura.png) -->
+
+  <footer class="module--footer">
+    © 2025 GameXperience · Todos los derechos reservados
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

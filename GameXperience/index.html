@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- Autor: Marco Antonio Ochavo Fernández -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameXperience Store</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- CABECERA -->
+  <header>
+    <div class="logo">
+      <img src="img/logo.jpg" alt="Logo GameXperience">
+      <h1>GameXperience</h1>
+    </div>
+
+    <nav class="main-nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#buscador">Buscador</a>
+      <a href="#" id="openAuth">Registro / Login</a>
+      <a href="#" id="cartBtn">Carrito 🛒</a>
+    </nav>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Buscar juegos...">
+      <button id="searchBtn">🔍</button>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- INICIO -->
+    <section id="inicio" class="bloque">
+      <!-- OFERTAS -->
+      <section class="ofertas">
+        <h2>🔥 Ofertas del momento</h2>
+        <div class="grid-juegos" id="gameGrid">
+          <article data-name="Call of Duty Black Ops 6">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1938090/header.jpg" alt="Call of Duty Black Ops 6">
+            <p>Call of Duty: Black Ops 6 — <span>49,99€</span></p>
+            <button class="addCartBtn">Añadir al carrito</button>
+          </article>
+
+          <article data-name="Battlefield 6">
+            <img src="https://royalcdkeys.com/cdn/shop/files/Battlefield_6.webp?v=1754586074" alt="Battlefield 6">
+            <p>Battlefield 6 — <span>39,99€</span></p>
+            <button class="addCartBtn">Añadir al carrito</button>
+          </article>
+
+          <article data-name="Super Mario Odyssey">
+            <img src="https://assets.nintendo.com/image/upload/f_auto/q_auto/dpr_1.5/c_fill,w_1200/ncom/en_US/games/switch/s/super-mario-odyssey-switch/hero" alt="Super Mario Odyssey">
+            <p>Super Mario Odyssey — <span>29,99€</span></p>
+            <button class="addCartBtn">Añadir al carrito</button>
+          </article>
+
+          <article data-name="Elden Ring">
+            <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/capsule_616x353.jpg?t=1748630546" alt="Elden Ring">
+            <p>Elden Ring — <span>54,99€</span></p>
+            <button class="addCartBtn">Añadir al carrito</button>
+          </article>
+        </div>
+      </section>
+
+      <!-- TENDENCIAS -->
+      <section class="tendencias">
+        <h2>📈 Tendencias</h2>
+        <div class="grid-simple">
+          <article data-name="Fortnite">
+            <h3>Fortnite</h3>
+            <p>Free to play — Popular en multiplataforma.</p>
+          </article>
+          <article data-name="FIFA 25">
+            <h3>EA Sports FC 25</h3>
+            <p>Última entrega de fútbol competitivo online.</p>
+          </article>
+          <article data-name="Valorant">
+            <h3>Valorant</h3>
+            <p>Shooter táctico competitivo en PC.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- NOVEDADES -->
+      <section class="novedades">
+        <h2>🆕 Novedades</h2>
+        <div class="grid-simple">
+          <article data-name="Starfield">
+            <h3>Starfield</h3>
+            <p>Aventura espacial RPG para Xbox/PC.</p>
+          </article>
+          <article data-name="Spider-Man 2">
+            <h3>Spider-Man 2</h3>
+            <p>Exclusivo de PlayStation 5, mundo abierto.</p>
+          </article>
+          <article data-name="Metroid Prime Remastered">
+            <h3>Metroid Prime Remastered</h3>
+            <p>Clásico remaster para Nintendo Switch.</p>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section id="catalogo" class="catalogo bloque">
+      <h2>🎮 Catálogo por plataforma</h2>
+      <div class="plataformas">
+        <div><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Playstation_logo_colour.svg" alt="PlayStation"><p>PlayStation</p></div>
+        <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Nintendo_switch_logo.png/500px-Nintendo_switch_logo.png" alt="Nintendo Switch"><p>Nintendo Switch</p></div>
+        <div><img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Xbox_app_logo.svg" alt="Xbox"><p>Xbox</p></div>
+        <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSHQrkdbrmYt9wDSSBLYSvOHP5ulSK3mNIAw&s" alt="PC"><p>PC</p></div>
+      </div>
+    </section>
+
+    <!-- BUSCADOR -->
+    <section id="buscador" class="bloque">
+      <h2>🔎 Buscador</h2>
+      <p>Escribe el nombre de un juego en la barra superior y pulsa en el botón de búsqueda para filtrar los resultados de la sección de ofertas, tendencias y novedades.</p>
+    </section>
+  </main>
+
+  <!-- MODAL CARRITO -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <h2>🛒 Tu carrito</h2>
+      <ul id="cartList"></ul>
+      <button id="closeCart">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- MODAL LOGIN / REGISTRO -->
+  <div id="authModal" class="modal">
+    <div class="modal-content auth">
+      <h2>👤 Acceso de usuario</h2>
+      <form class="auth-form">
+        <label>Email</label>
+        <input type="email" placeholder="tuemail@ejemplo.com">
+        <label>Contraseña</label>
+        <input type="password" placeholder="********">
+        <button type="button">Iniciar sesión</button>
+      </form>
+      <p class="nota-registro">¿Aún no tienes cuenta? En la versión real de la tienda se podría habilitar aquí el registro.</p>
+      <button id="closeAuth">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 GameXperience Store — Todos los derechos reservados.</p>
+    <p>Contacto: soporte@gamexperience.com</p>
+    <div class="social">
+      <a href="#">Twitter</a> | <a href="#">Instagram</a> | <a href="#">YouTube</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
